@@ -22,8 +22,35 @@ console.log(document.getElementById('btn'));
 //console.log(document.querySelector('input'));
 
 const editItemHandler = (elem) => {
-    console.log(elem.parentElement);
+    const target = elem.parentElement.querySelector('span');
+    console.log(target);
+/* 
+    if (target.contentEditable == 'false' || target.contentEditable == 'inherit') {
+        target.contentEditable = true;
+        elem.parentElement.querySelector('span').focus();
+        elem.innerText = '🔒';
+    } else {
+        elem.innerText = '✏️';
+        target.contentEditable = false;
+    }
+
+ */
+    if (target.contentEditable === 'true') {
+        elem.innerText = '✏️';
+        target.contentEditable = 'false';
+    } else {
+        target.contentEditable = 'true';
+        elem.parentElement.querySelector('span').focus();
+        elem.innerText = '🔒';
+    }
+    //console.log(elem.parentElement);
     //elem.parentElement.querySelector('span').innerHTML = 'Edited';
-    elem.parentElement.querySelector('span').contentEditable = true;
-    elem.parentElement.querySelector('span').focus();
+    
 }
+
+if (true && false) {
+    console.log('truthy');
+} else {
+    console.log('falsy');
+}
+//iherit || false|| true
