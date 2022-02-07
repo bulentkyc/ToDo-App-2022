@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    margin: auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#list{
+    padding: 0;
+    list-style-type: none;
+}
+
+#list input, #list button{
+    width: 30px;
+    height: 30px;
+}
+
+#list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
